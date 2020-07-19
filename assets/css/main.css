@@ -1744,6 +1744,10 @@ input, select, textarea {
 
 /* Image */
 
+	.aboutme {
+
+	}
+
 	.image {
 		display: inline-block;
 		border: 0;
@@ -2654,7 +2658,7 @@ input, select, textarea {
 	.visibledesktop{display:display;}
 
 	@media (max-width:320px){
-		.visibledevice {display:none;}
-		.visibledesktop{display:display;}
+		.visibledevice {display:block;}
+		.visibledesktop{display:none;}
 	}
 
