@@ -1768,6 +1768,19 @@ input, select, textarea {
 				border-radius:50%;
 			}
 
+		.image.avatar48about {
+			width: 100px;
+			height: 100px;
+			background: #000;
+			border-radius:50%;
+		}
+
+			.image.avatar48about img {
+				width: 100px;
+				height: 100px;
+				border-radius:50%;
+			}
+
 		.image.fit {
 			display: block;
 			width: 100%;
@@ -2587,7 +2600,7 @@ input, select, textarea {
 		/* Basic */
 
 			body, input, textarea, select {
-				font-size: 14pt;
+				font-size: 11pt;
 			}
 
 			h2 {
@@ -2636,3 +2649,12 @@ input, select, textarea {
 				}
 
 	}
+
+	.visibledevice {display:none;}
+	.visibledesktop{display:display;}
+
+	@media (max-width:320px){
+		.visibledevice {display:none;}
+		.visibledesktop{display:display;}
+	}
+
