@@ -33,7 +33,18 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="#home" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-atom">Research</span></a></li>
+								<li class="research-nav-item">
+									<a href="#portfolio" id="portfolio-link" aria-expanded="false" aria-controls="research-subnav"><span class="icon solid fa-atom">Research</span></a>
+									<ul id="research-subnav" class="research-subnav" hidden>
+										<li><a href="#atomic-magnetometer">Atomic Magnetometer</a></li>
+										<li><a href="#nqr-magnetometer">NQR RF Magnetometer</a></li>
+										<li><a href="#hybrid-pumping">Hybrid Optical Pumping of Dual-Atomic Vapours</a></li>
+										<li><a href="#low-noise-electronics">Low Noise Electronics for Magnetometry</a></li>
+										<li><a href="#cold-atoms">Electromagnet for Cold Atoms</a></li>
+										<li><a href="#radio-astronomy">Radio Astronomy</a></li>
+										<li><a href="research/index.html">More</a></li>
+									</ul>
+								</li>
 								<li><a href="#CV" id="cv-link"><span class="icon solid fa-file-pdf">Curriculum Vitae</span></a></li>
 								<li><a href="#publications" id="publication-link"><span class="icon solid fa-book">Publications</span></a></li>
 								<li><a href="#other" id="other-link"><span class="icon solid fa-question-circle">Other</span></a></li>
@@ -49,9 +60,9 @@
 						<ul class="icons">
 							<!--<li><a target="_blank" href="https://twitter.com/ZirdiBirdy" class="icon brands fa-twitter"><span class="label">	 Twitter</span></a></li>-->
 							<!--<li><a target="_blank" href="https://www.facebook.com/zirdi.syukur/" class="icon brands fa-facebook-f"><span class="	label">Facebook</span></a></li>-->
-							<li><a target="_blank" href="https://github.com/zirdisyukur" class="icon brands fa-github"><span class="label">Github</span></a></	li>
-							<li><a href="#" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/zirdisyukur" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/m-zirdi-syukur-28a2ab1a2/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:mohammad.syukur@physics.ox.ac.uk" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 
 				</div>
@@ -94,58 +105,58 @@
 					<section id="portfolio" class="two">
 						<div class="container">
 
-							<header>
-								<h2>Research</h2>
-							</header>
-
-
-							<header>
-								<h3>Building and testing a radio telescope</h3> <a target="_blank" href="telescopePresentation.pptx" download class="button scrolly">Download Presentation</a>
-							</header>
-
-							<p>One of the most important wavelengths for research in radio astronomy is 21cm. Galaxies are filled with neutral atomic hydrogen gas that emits strongly at this wavelength, 
-								making it an invaluable tool for research on nearby galaxies' structures, dynamics, and star formation rates. This wavelength is protected by international agreements 
-								but some countries are more zealous spectrum protectors than others. In this project, I make improvements to a small, portable, feed-horn style radio telescope  
-								in order to characterize the radio frequency interference (RFI) environment in Singapore near 21cm and to determine whether it would be useful to build a larger 
-								telescope on the Yale-NUS campus for teaching purposes in the future. Click here to download my presentation on the research</p>
-									
-							<div class = "row">
-								<div class = "col-6">
-									<article class = "item">
-										<a target="_blank" href="https://www.linkedin.com/posts/yale-nus-college_over-the-semester-break-mohammad-zirdi-syukur-activity-6712178714014310400-nzZl" class="image fit"><img src="images/telescopeselfie.jpeg" alt="" /></a>
-										<header>
-											<h3>The Constructed Radio Telescope</h3>
-										</header>
-									</article>
-								</div>
-								<div class = "col-6">
-									<article class = "item">
-										<a target="_blank" href="https://github.com/0xCoto/VIRGO" class="image fit"><img src="images/graph.png" alt="" /></a>
-										<header>
-											<h3>Spectrums around 1.4 GHz produced with VIRGO spectrometer</h3>
-										</header>
-									</article>
-									<article class = "item">
-										<a target="_blank" href="https://www.haystack.mit.edu/edu/pcr/Data/pdf/Hydrogen%2021-cm%20Emission%20line-final.pdf" class="image fit"><img src="images/milky_way.jpg" alt="" /></a>
-										<header>
-											<h3>Read about 21-cm Radiation</h3>
-										</header>
-									</article>
+							<div class="research-gallery" id="research-gallery" aria-label="Research photo gallery">
+								<div class="research-gallery-frame">
+									<img id="research-gallery-image-a" class="is-active" src="images/research-gallery-01.jpg" alt="" aria-hidden="true" />
+									<img id="research-gallery-image-b" src="images/research-gallery-02.jpg" alt="" aria-hidden="true" />
+									<h2 class="research-gallery-title">Research</h2>
+									<div class="research-gallery-caption" aria-live="polite">
+										<p id="research-gallery-description">RF Magnetometer embedded in magnetic shielding</p>
+										<div class="research-gallery-controls" aria-label="Gallery controls">
+											<button type="button" id="research-gallery-prev" aria-label="Previous photo">&lt;</button>
+											<button type="button" id="research-gallery-next" aria-label="Next photo">&gt;</button>
+										</div>
+									</div>
 								</div>
 							</div>
 
-							<header>
-								<h3>Direct-Current electromagnet field simulations/design</h3>
-							</header>
+							<details class="research-project" id="atomic-magnetometer">
+								<summary><img class="project-icon" src="images/project-atomic-magnetometer.svg" alt="" /><span><strong>QEP 2.0 Atomic Magnetometer</strong><small>Precision sensing with alkali vapour</small></span></summary>
+								<div class="research-project-content">
+									<p>At A*STAR Q.InC, I built and tested a prototypical atomic magnetometer capable of sensing with nearly a part-per-billion signal even within a magnetic field of magnitudes comparable to Earth's field. My work included optical and mechanical design, gradient coils, laser systems, temperature control, and data acquisition and analysis.</p>
+									<p class="project-reference">Related research context: <a target="_blank" rel="noopener" href="https://www.a-star.edu.sg/qinc/research/sensing">A*STAR Q.InC sensing research</a>.</p>
+								</div>
+							</details>
 
-							<p>At Yale-NUS College, Professor Ben Olsen has been steadily constructing a bitter-type electromagnet for future ultracold quantum gas experiments with alkali atoms. To enable to apparatus
-								to conduct future experiments of varying types, it is required that the magnetic fields produced by the electromagnets msut be strong, quick, and flexible to different configurations. Example future experiments include probing
-								exotic quantum phases of matter or studying many-body spin dynamics. To help achieve this goal,
-								I am working with Professor Olsen in simulating various designs of a section of the electromagnets called the Bias and Curvature coils, the coils responsible for trapping near 0 kelvin alkali atoms for studying.
-								I am charged with converting existing simulations in Mathematica into Julia code, whose quickness in scientific computation aids to our purpose of optimizing digital designs of the electromagnets before manufacturing.
-								On top of simulating the magnetic fields, I am developing the code necessary to provide interactive and understandable visualizations of the geometry and currents of the electromagnets. The goal is to release developed
-								code with documentation as to how to use such functions.
-							</p>
+							<details class="research-project" id="nqr-magnetometer">
+								<summary><img class="project-icon" src="images/project-nqr.svg" alt="" /><span><strong>NQR Radio-Frequency Magnetometer</strong><small>Detection research for border screening</small></span></summary>
+								<div class="research-project-content">
+									<p>I designed optical-pump lasers, optomechanics, electromagnets, and an oven for an NQR-based radio-frequency magnetometer project aimed at detecting unexploded ordnance and crystalline narcotics.</p>
+								</div>
+							</details>
+
+							<details class="research-project" id="hybrid-pumping">
+										<summary><img class="project-icon" src="images/project-hybrid-pumping.svg" alt="" /><span><strong>Hybrid Optical Pumping of Dual-Atomic Vapours</strong><small>Investigating spin-temperature equilibrium</small></span></summary>
+								<div class="research-project-content">
+									<p>I designed an experiment to investigate and test common assumptions made about spin-temperature equilibrium in hybrid alkali-vapour cells. In this project, we investigated the technique of hybrid pumping, which often increases the uniformity and sensitivity of atomic sensors; in particular, we wanted to experimentally observe how the efficiency of the technique diminishes beyond a certain ratio of densities within a hybrid vapour cell. The longer term goal is to improve vapour-cell uniformity and support more sensitive atomic magnetometers.</p>
+								</div>
+							</details>
+
+							<details class="research-project" id="low-noise-electronics">
+								<summary><img class="project-icon" src="images/project-low-noise.svg" alt="" /><span><strong>Low Noise Electronics for Magnetometry</strong><small>Custom current sources and amplifiers</small></span></summary>
+								<div class="research-project-content">
+									<p>I built low-noise current sources and amplifiers to provide stable references for magnetometry experiments. Their radio-frequency noise performance was comparable to commercial instruments, including products that were difficult to obtain.</p>
+									<p class="project-reference">Related research context: <a target="_blank" rel="noopener" href="https://www.a-star.edu.sg/qinc/research/sensing">A*STAR Q.InC sensing research</a>.</p>
+								</div>
+							</details>
+
+							<details class="research-project" id="cold-atoms">
+								<summary><img class="project-icon" src="images/project-magnet.svg" alt="" /><span><strong>Electromagnet for Cold Atoms</strong><small>Direct-current field simulations and design</small></span></summary>
+								<div class="research-project-content">
+
+							<p>This undergraduate research project and my senior-year thesis at Yale-NUS College explored a Bitter-type bias-curvature electromagnet for ultracold lithium-6 experiments. The bias coils provide the strong magnetic field that tunes atom interactions, while the smaller curvature coils shape the field profile and can compensate its curvature. I used finite-element simulations to compare coil designs, then fabricated prototype coils and measured their magnetic-field profiles. These measurements supported a model of a strong, near-zero-curvature field, while full-power operation and the magnet’s cooling performance remained to be demonstrated.</p>
+									<p class="project-reference">Theoretical motivation: <a target="_blank" rel="noopener" href="https://doi.org/10.1126/sciadv.aax1568">“Observation of a transition between dynamical phases in a quantum degenerate Fermi gas” by Smale et al.</a>. Thesis supervisor: <a target="_blank" rel="noopener" href="https://olsenlab.science/index.html">Dr. Ben A. Olsen (Olsen Lab)</a>.</p>
+							<a class="button research-paper-button" href="electromagnet-capstone.pdf" download>Download Paper</a>
 
 							<div class = "row">
 								<div class = "col-6">
@@ -170,8 +181,67 @@
 										</header>
 									</article>
 								</div>
+								<article class="item">
+									<a target="_blank" href="images/electromagnet-coil-assembly.png" class="image fit"><img src="images/electromagnet-coil-assembly.png" alt="Curvature coil copper layers shown during assembly" /></a>
+									<header><h3>Assembling the curvature-coil stack</h3></header>
+								</article>
+								<article class="item">
+									<a target="_blank" href="images/electromagnet-field-measurement.png" class="image fit"><img src="images/electromagnet-field-measurement.png" alt="Magnetometer and curvature coil arranged for axial field measurements" /></a>
+									<header><h3>Measuring the axial field profile</h3></header>
+								</article>
+								<article class="item">
+									<a target="_blank" href="images/electromagnet-bias-curvature-profile.png" class="image fit"><img src="images/electromagnet-bias-curvature-profile.png" alt="Modelled bias-curvature field profile with near-zero curvature at the centre" /></a>
+									<header><h3>Modelled 832 G near-zero-curvature profile</h3></header>
+								</article>
 							</div>
-						
+								</div>
+							</details>
+
+							<details class="research-project" id="radio-astronomy">
+								<summary><img class="project-icon" src="images/project-radio.svg" alt="" /><span><strong>Radio Astronomy</strong><small>Building and testing a radio telescope</small></span></summary>
+								<div class="research-project-content">
+
+										<p>This was an undergraduate summer research experience. One of the most important wavelengths for research in radio astronomy is 21cm. Galaxies are filled with neutral atomic hydrogen gas that emits strongly at this wavelength,
+								making it an invaluable tool for research on nearby galaxies' structures, dynamics, and star formation rates. This wavelength is protected by international agreements
+								but some countries are more zealous spectrum protectors than others. In this project, I make improvements to a small, portable, feed-horn style radio telescope
+								in order to characterize the radio frequency interference (RFI) environment in Singapore near 21cm and to determine whether it would be useful to build a larger
+								telescope on the Yale-NUS campus for teaching purposes in the future. Click here to download my presentation on the research</p>
+									<a target="_blank" href="telescopePresentation.pptx" download class="button">Download Presentation</a>
+
+							<div class = "row">
+								<div class = "col-6">
+									<article class = "item">
+										<a target="_blank" href="https://www.linkedin.com/posts/yale-nus-college_over-the-semester-break-mohammad-zirdi-syukur-activity-6712178714014310400-nzZl" class="image fit"><img src="images/telescopeselfie.jpeg" alt="" /></a>
+										<header>
+											<h3>The Constructed Radio Telescope</h3>
+										</header>
+									</article>
+								</div>
+								<div class = "col-6">
+									<article class = "item">
+										<a target="_blank" href="https://github.com/0xCoto/VIRGO" class="image fit"><img src="images/graph.png" alt="" /></a>
+										<header>
+											<h3>Spectrums around 1.4 GHz produced with VIRGO spectrometer</h3>
+										</header>
+									</article>
+									<article class = "item">
+										<a target="_blank" href="https://www.haystack.mit.edu/edu/pcr/Data/pdf/Hydrogen%2021-cm%20Emission%20line-final.pdf" class="image fit"><img src="images/milky_way.jpg" alt="" /></a>
+										<header>
+											<h3>Read about 21-cm Radiation</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+								</div>
+							</details>
+
+							<details class="research-project research-more" id="research-more">
+								<summary><img class="project-icon" src="images/project-more.svg" alt="" /><span><strong>More Research</strong><small>Visit the dedicated research website</small></span></summary>
+								<div class="research-project-content">
+									<p>Explore a broader overview of my research interests, selected projects, and future work in quantum technologies.</p>
+									<a class="button research-more-button" href="research/index.html">Visit the research website</a>
+								</div>
+							</details>
 							<!--
 							<div class="row">
 								<div class="col-4 col-12-mobile">
@@ -225,14 +295,42 @@
 					<section id="CV" class="four">
 						<div class="container">
 
-							<header>
+							<header class="cv-section-heading">
 								<h2>Curriculum Vitae</h2>
+								<a target="_blank" href="cv.pdf" download class="button cv-download">Download CV</a>
 							</header>
 
-							<p>Find my CV here</p>
-							<footer>
-								<a target="_blank" href="cv.pdf" download class="button scrolly">Download CV</a>
-							</footer>
+							<div class="cv-overview">
+								<section class="cv-group">
+									<h3>Education</h3>
+									<div class="cv-entry">
+										<div class="cv-entry-heading"><strong>MSc in Quantum Technologies at the University of Oxford</strong><span>Sept 2026–Present</span></div>
+										<p><strong>Relevant courses:</strong> Quantum Technology Hardware and Applications; Quantum Matter 1 &amp; 3; Quantum Processes and Computation; Industry Seminar; Experimental Techniques; To Be Determined Research Dissertation.</p>
+									</div>
+									<div class="cv-entry">
+										<div class="cv-entry-heading"><strong>BSc in Physical Sciences at Yale-NUS College</strong><span>2019–2023</span></div>
+										<p>Honours + cum laude · 4.71 / 5.00 GPA</p>
+										<p><strong>Relevant courses:</strong> Intro to Quantum Mechanics; Intro to Quantum Information; E&amp;M; Classical Mechanics; Statistical Thermodynamics; Intro to GR; and more.</p>
+									</div>
+								</section>
+								<section class="cv-group">
+									<h3>Work Experience</h3>
+									<div class="cv-entry">
+										<div class="cv-entry-heading"><strong>Research Engineer · Quantum Innovation Centre (Q.InC) at A*STAR, Singapore</strong><span>2023–2026</span></div>
+										<p>Atomic magnetometry group, under Dr. Junyi Lee. Worked across atomic and optical experiments, sensor design, CAD, data analysis, programming, procurement, and laboratory safety.</p>
+									</div>
+								</section>
+								<section class="cv-group">
+									<h3>Outreach</h3>
+									<p><strong>Co-Chair</strong>, Quantum Young Researchers Association (QYRA)</p>
+									<p><strong>Singapore Representative</strong>, International Year of Quantum (IYQ)</p>
+								</section>
+								<section class="cv-group cv-skills">
+									<h3>Skills</h3>
+									<p><strong>Programming:</strong> Python, Julia, R, Java, Bash</p>
+									<p><strong>Tools:</strong> Git, LaTeX, HTML, CSS</p>
+								</section>
+							</div>
 
 						</div>
 					</section>
@@ -241,105 +339,112 @@
 					<section id="publications" class="four">
 						<div class="container">
 
-							<header>
+							<div class="catalogue-heading">
 								<h2>Publications and Reports</h2>
-							</header>
-
-							<div class = "row">
-								<div class = "col-4">
-									<article class = "item">
-										<a target="_blank" href="teethProbeProject.pdf" class="image fit"><img src="images/teethProbeProject.png" alt="" /></a>
-										<header>
-											<h3>Final experiment report on probing dental carries using light spectroscopy for Experimental Methods Class</h3>
-										</header>
-									</article>
-								</div>
-								<div class = "col-4">
-									<article class = "item">
-										<a target="_blank" href="Lab 4 Effects.docx" download class="image fit"><img src="images/guitar.jpeg" alt="" /></a>
-										<header>
-											<h3>Simple lab blurb for Physics of Electric guitar class describing how guitar pedals change the waveform of guitar sounds</h3>
-										</header>
-									</article>
-								</div>
-								<div class = "col-4">
-									<article class = "item">
-										<a target="_blank" href="SI2 Team Poster.png" download class="image fit"><img src="images/SI2 Team Poster copy.png" alt="" /></a>
-										<header>
-											<h3>Infographic with data-backed claims that climate change-induced tropical cyclone intensities will increase, having adverse effects on many ecosystems</h3>
-										</header>
-									</article>
+								<div class="catalogue-toolbar" data-catalogue-filter="publications">
+									<input class="catalogue-search" type="search" placeholder="Search" aria-label="Search publications and reports" />
+									<details class="catalogue-tag-dropdown"><summary>Filter <span class="catalogue-selected-count">All tags</span></summary><div class="catalogue-tags">
+										<label><input type="checkbox" value="Classwork" /> Classwork</label>
+										<label><input type="checkbox" value="Peer-reviewed" /> Peer-reviewed</label>
+										<label><input type="checkbox" value="Presentation" /> Presentation</label>
+										<label><input type="checkbox" value="Report" /> Report</label>
+										<div class="catalogue-sort-options"><span>Sort order</span>
+											<label><input type="radio" name="publications-sort" value="alphabetical" checked /> Alphabetical</label>
+											<label><input type="radio" name="publications-sort" value="oldest" /> Oldest</label>
+											<label><input type="radio" name="publications-sort" value="recent" /> Recent</label>
+										</div>
+									</div></details>
 								</div>
 							</div>
 
+							<div class="publications-grid catalogue-grid" data-catalogue="publications">
+								<button type="button" class="publication-tile catalogue-card" data-group="publications" data-title="Optical Detection of Dental Caries" data-description="Final experiment report on probing dental caries using light spectroscopy for Experimental Methods Class." data-date="2021-06-24" data-date-label="24 June 2021" data-media="teethProbeProject.pdf" data-kind="pdf" data-tags="Classwork,Report">
+									<img src="images/teethProbeProject.png" alt="" />
+									<span class="publication-tile-title">Optical Detection of Dental Caries</span><span class="publication-tile-tags"></span>
+									<time datetime="2021-06-24">24 June 2021</time>
+								</button>
+								<button type="button" class="publication-tile catalogue-card" data-group="publications" data-title="How Guitar Pedals Shape Sound" data-description="A short report for the Physics of Electric Guitar class describing how guitar pedals change the waveform of guitar sounds." data-date="2020-11-13" data-date-label="13 November 2020" data-media="reports/lab-4-effects-preview.pdf" data-original-url="Lab 4 Effects.docx" data-original-label="Download DOCX" data-kind="pdf" data-tags="Classwork">
+									<img src="images/guitar.jpeg" alt="" />
+									<span class="publication-tile-title">How Guitar Pedals Shape Sound</span><span class="publication-tile-tags"></span>
+									<time datetime="2020-11-13">13 November 2020</time>
+								</button>
+								<button type="button" class="publication-tile catalogue-card" data-group="publications" data-title="Tropical Cyclones and Climate Change" data-description="Infographic with data-backed claims that climate change-induced tropical cyclone intensities will increase, having adverse effects on many ecosystems." data-date="2023-01-01" data-date-label="1 January 2023" data-media="SI2 Team Poster.png" data-kind="image" data-tags="Classwork,Presentation">
+									<img src="images/SI2 Team Poster copy.png" alt="" />
+									<span class="publication-tile-title">Tropical Cyclones and Climate Change</span><span class="publication-tile-tags"></span>
+									<time datetime="2023-01-01">1 January 2023</time>
+								</button>
+							</div>
+							<p class="catalogue-empty" data-catalogue-empty="publications" hidden>No search results... yet :D</p>
+
 						</div>
 					</section>
+
+					<dialog class="publication-dialog" id="publication-dialog" aria-labelledby="publication-dialog-title">
+						<div class="publication-dialog-inner">
+							<button type="button" class="publication-close" aria-label="Close details">&times;</button>
+							<h2 id="publication-dialog-title"></h2>
+							<div id="publication-dialog-tags" class="publication-tags"></div>
+							<time id="publication-dialog-date"></time>
+							<div class="publication-dialog-content" id="publication-dialog-content">
+								<p id="publication-dialog-description"></p>
+								<div id="publication-dialog-media" class="publication-dialog-media"></div>
+							</div>
+							<div class="publication-dialog-controls">
+								<button type="button" id="publication-dialog-prev" aria-label="Previous publication">&larr; Previous</button>
+								<a id="publication-dialog-download" class="button" href="#" target="_blank" rel="noopener">Open original file</a>
+								<button type="button" id="publication-dialog-next" aria-label="Next publication">Next &rarr;</button>
+							</div>
+						</div>
+					</dialog>
 				<!-- other -->
 					<section id="other" class="four">
 						<div class="container">
 
-							<header>
+							<div class="catalogue-heading">
 								<h2>Some other cool things!</h2>
-							</header>
-
-							<div class = "row">
-								<div class = "col-4">
-									<article class = "item">
-										<a target="_blank" download class="image fit"><img src="images/tutor.jpeg" alt="" /></a>
-										<header>
-											<h3>I am available for private tutoring in mathematics and physics!</h3>
-										</header>
-									</article>
-								</div>
-								<div class = "col-4">
-									<article class = "item">
-										<a target="_blank" href="https://open.spotify.com/artist/55gI9Vfk3VYOqEmhaMI4pN?si=RBOCtjwYSPK2E2aNdOGmAw&dl_branch=1" download class="image fit"><img src="images/EP.JPG" alt="" /></a>
-										<header>
-											<h3>My first EP with songs that draw inspiration from the sky</h3>
-										</header>
-									</article>
-								</div>
-								<div class = "col-4">
-									<article class = "item">
-										<a target="_blank" href="" download class="image fit"><img src="images/goodReads.png" alt="" /></a>
-										<header>
-											<h3>Interesting reads!</h3>
-										</header>
-									</article>
-								</div>
-								<div class = "col-4">
-									<article class = "item">
-										<a target="_blank" href="https://www.facebook.com/tiwala.productions" download class="image fit"><img src="images/tiwala.jpeg" alt="" /></a>
-										<header>
-											<h3>Original musical made by friends for which I produced some songs</h3>
-										</header>
-									</article>
-								</div>
-								<div class = "col-4">
-									<article class = "item">
-										<a target="_blank" href="https://github.com/howardisaacson/Introduction-to-Astronomy-Research-2018" download class="image fit"><img src="images/telescope.png" alt="" /></a>
-										<header>
-											<h3>Interesting introduction to astronomy course I did with a berkeley professor the summer of 2019</h3>
-										</header>
-									</article>
-								</div>
-								<div class = "col-4">
-									<article class = "item">
-										<a target="_blank" href="https://youtu.be/AeVQ3rC1Xdw" class="image fit"><img src="images/m33song.png" alt="" /></a>
-										<header>
-											<h3>My song about the M33 X-7 Black Hole Binary <br />(and other music)</h3>
-										</header>
-									</article>
-								</div>
-								<div class = "col-4">
-									<article class = "item">
-										<a target="_blank" href="m33x7BH.pdf" download class="image fit"><img src="images/m33expl.png" alt="" /></a>
-										<header>
-											<h3>explanationing the song's symbolism that characterizes the parameters and behaviors of the black hole</h3>
-										</header>
-									</article>
+								<div class="catalogue-toolbar" data-catalogue-filter="other">
+									<input class="catalogue-search" type="search" placeholder="Search" aria-label="Search other things" />
+									<details class="catalogue-tag-dropdown"><summary>Filter <span class="catalogue-selected-count">All tags</span></summary><div class="catalogue-tags">
+										<label><input type="checkbox" value="Classwork" /> Classwork</label>
+										<label><input type="checkbox" value="Presentation" /> Presentation</label>
+										<label><input type="checkbox" value="Report" /> Report</label>
+										<label><input type="checkbox" value="Music" /> Music</label>
+										<label><input type="checkbox" value="Reading" /> Reading</label>
+										<label><input type="checkbox" value="Misc" /> Misc</label>
+										<label><input type="checkbox" value="Writing" /> Writing</label>
+										<div class="catalogue-sort-options"><span>Sort order</span>
+											<label><input type="radio" name="other-sort" value="alphabetical" checked /> Alphabetical</label>
+											<label><input type="radio" name="other-sort" value="oldest" /> Oldest</label>
+											<label><input type="radio" name="other-sort" value="recent" /> Recent</label>
+										</div>
+									</div></details>
 								</div>
 							</div>
+
+							<div class="publications-grid catalogue-grid" data-catalogue="other">
+								<button type="button" class="publication-tile catalogue-card" data-group="other" data-title="Mathematics and Physics Tutoring" data-description="I am available for private tutoring in mathematics and physics!" data-date="2023-01-01" data-date-label="1 January 2023" data-media="images/tutor.jpeg" data-original-url="images/tutor.jpeg" data-original-label="View image" data-kind="image" data-tags="Misc">
+									<img src="images/tutor.jpeg" alt="" /><span class="publication-tile-title">Mathematics and Physics Tutoring</span><span class="publication-tile-tags"></span><time datetime="2023-01-01">1 January 2023</time>
+								</button>
+								<button type="button" class="publication-tile catalogue-card" data-group="other" data-title="Songs Inspired by the Sky" data-description="My first EP with songs that draw inspiration from the sky." data-date="2023-01-01" data-date-label="1 January 2023" data-media="images/EP.JPG" data-original-url="https://open.spotify.com/artist/55gI9Vfk3VYOqEmhaMI4pN?si=RBOCtjwYSPK2E2aNdOGmAw&amp;dl_branch=1" data-original-label="Listen on Spotify" data-kind="image" data-tags="Music">
+									<img src="images/EP.JPG" alt="" /><span class="publication-tile-title">Songs Inspired by the Sky</span><span class="publication-tile-tags"></span><time datetime="2023-01-01">1 January 2023</time>
+								</button>
+								<button type="button" class="publication-tile catalogue-card" data-group="other" data-title="Interesting Reads" data-description="Interesting reads!" data-date="2023-01-01" data-date-label="1 January 2023" data-media="images/goodReads.png" data-original-url="images/goodReads.png" data-original-label="View image" data-kind="image" data-tags="Reading">
+									<img src="images/goodReads.png" alt="" /><span class="publication-tile-title">Interesting Reads</span><span class="publication-tile-tags"></span><time datetime="2023-01-01">1 January 2023</time>
+								</button>
+								<button type="button" class="publication-tile catalogue-card" data-group="other" data-title="Tiwala: Original Musical" data-description="An original musical made by friends, for which I produced some songs." data-date="2023-01-01" data-date-label="1 January 2023" data-media="images/tiwala.jpeg" data-original-url="https://www.facebook.com/tiwala.productions" data-original-label="Visit Tiwala Productions" data-kind="image" data-tags="Music,Writing">
+									<img src="images/tiwala.jpeg" alt="" /><span class="publication-tile-title">Tiwala: Original Musical</span><span class="publication-tile-tags"></span><time datetime="2023-01-01">1 January 2023</time>
+								</button>
+								<button type="button" class="publication-tile catalogue-card" data-group="other" data-title="Introduction to Astronomy Research" data-description="An introduction to astronomy course I took with a Berkeley professor in summer 2019." data-date="2019-06-01" data-date-label="Summer 2019" data-media="images/telescope.png" data-original-url="https://github.com/howardisaacson/Introduction-to-Astronomy-Research-2018" data-original-label="View course materials" data-kind="image" data-tags="Classwork,Misc">
+									<img src="images/telescope.png" alt="" /><span class="publication-tile-title">Introduction to Astronomy Research</span><span class="publication-tile-tags"></span><time datetime="2019-06-01">Summer 2019</time>
+								</button>
+								<button type="button" class="publication-tile catalogue-card" data-group="other" data-title="M33 X-7: A Black Hole Binary Song" data-description="My song about the M33 X-7 black hole binary (and other music)." data-date="2023-01-01" data-date-label="1 January 2023" data-media="https://www.youtube-nocookie.com/embed/AeVQ3rC1Xdw" data-original-url="https://youtu.be/AeVQ3rC1Xdw" data-original-label="Watch on YouTube" data-kind="video" data-tags="Music,Writing">
+									<img src="images/m33song.png" alt="" /><span class="publication-tile-title">M33 X-7: A Black Hole Binary Song</span><span class="publication-tile-tags"></span><time datetime="2023-01-01">1 January 2023</time>
+								</button>
+								<button type="button" class="publication-tile catalogue-card" data-group="other" data-title="The Story Behind the M33 X-7 Song" data-description="An explanation of the song's symbolism, which characterizes the black hole's parameters and behaviour." data-date="2023-01-01" data-date-label="1 January 2023" data-media="m33x7BH.pdf" data-original-url="m33x7BH.pdf" data-original-label="Download PDF" data-kind="pdf" data-tags="Writing,Report">
+									<img src="images/m33expl.png" alt="" /><span class="publication-tile-title">The Story Behind the M33 X-7 Song</span><span class="publication-tile-tags"></span><time datetime="2023-01-01">1 January 2023</time>
+								</button>
+							</div>
+							<p class="catalogue-empty" data-catalogue-empty="other" hidden>No search results... yet :D</p>
 						</div>
 					</section>
 
@@ -353,11 +458,12 @@
 
 							<div class="bottom">
 
-							<h5><strong>Emails:</strong><br>
-								<a href="mailto:zirdisyukur@u.yale-nus.edu.sg">zirdisyukur@u.yale-nus.edu.sg</a><br>
-								<a href="mailto:zirdisyukur@gmail.com">zirdisyukur@gmail.com</a><br>
-								<a href="mailto:mohammad.syukur@physics.ox.ac.uk">mohammad.syukur@physics.ox.ac.uk</a>
-							</h5>
+							<div class="contact-intro"><p>For research, collaboration, or speaking enquiries, please get in touch by email or connect with me on LinkedIn.</p></div>
+							<div class="contact-email-grid">
+								<a class="contact-email-card" href="mailto:mohammad.syukur@physics.ox.ac.uk"><span class="contact-email-label">University of Oxford</span><span class="contact-email-address">mohammad.syukur@physics.ox.ac.uk</span></a>
+								<a class="contact-email-card" href="mailto:zirdisyukur@gmail.com"><span class="contact-email-label">Personal</span><span class="contact-email-address">zirdisyukur@gmail.com</span></a>
+								<a class="contact-email-card" href="mailto:zirdisyukur@u.yale-nus.edu.sg"><span class="contact-email-label">Yale-NUS College</span><span class="contact-email-address">zirdisyukur@u.yale-nus.edu.sg</span></a>
+							</div>
 							
 
 							<!--<h5><strong>Phone:</strong> +65 8893 0336</h5>-->
@@ -366,10 +472,10 @@
 						<ul class="icons">
 							<!--<li><a target="_blank" href="https://twitter.com/ZirdiBirdy" class="icon brands fa-twitter"><span class="label">	 Twitter</span></a></li>-->
 							<!--<li><a target="_blank" href="https://www.facebook.com/zirdi.syukur/" class="icon brands fa-facebook-f"><span class="	label">Facebook</span></a></li>-->
-							<li><a target="_blank" href="https://github.com/zirdisyukur" class="icon brands fa-github"><span class="label">Github</span></a></	li>
-							<li><a target="_blank" href="https://www.linkedin.com/in/m-zirdi-syukur-28a2ab1a2/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-							<li><a href="mailto: zirdisyukur@u.yale-nus.edu.sg" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+						<div class="contact-social-links">
+							<a class="contact-social-link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/m-zirdi-syukur-28a2ab1a2/"><span class="icon brands fa-linkedin" aria-hidden="true"></span>LinkedIn</a>
+							<a class="contact-social-link" target="_blank" rel="noopener" href="https://github.com/zirdisyukur"><span class="icon brands fa-github" aria-hidden="true"></span>GitHub</a>
+						</div>
 
 				</div>
  							<!--

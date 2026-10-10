@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Centered optical cell containing two atomic species crossed by a laser">
+  <rect width="160" height="160" rx="22" fill="#183343"/>
+  <circle cx="80" cy="75" r="42" fill="#244352" stroke="#f1f4e8" stroke-width="5"/>
+  <path d="M80 117v16m-20 0h40" fill="none" stroke="#f1f4e8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M13 75h134m-12-10 12 10-12 10" fill="none" stroke="#ed967f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="53" r="5" fill="#ed967f"/><circle cx="95" cy="53" r="5" fill="#7bc8d1"/>
+  <circle cx="74" cy="64" r="5" fill="#7bc8d1"/><circle cx="105" cy="64" r="5" fill="#ed967f"/>
+  <circle cx="55" cy="86" r="5" fill="#7bc8d1"/><circle cx="86" cy="86" r="5" fill="#ed967f"/>
+  <circle cx="65" cy="98" r="5" fill="#ed967f"/><circle cx="96" cy="98" r="5" fill="#7bc8d1"/>
+</svg>

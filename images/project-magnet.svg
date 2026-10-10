@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Two nested, layered copper electromagnet coil assemblies in perspective">
+  <rect width="160" height="160" rx="22" fill="#273243"/>
+  <!-- Outer bias-coil stack -->
+  <path d="M25 62v39a55 28 0 0 0 110 0V62" fill="#98462f" stroke="#753b30" stroke-width="2"/>
+  <path d="M27 66A53 28 0 0 0 133 66M26 72A54 28 0 0 0 134 72M26 78A54 28 0 0 0 134 78M25 84A55 28 0 0 0 135 84M25 90A55 28 0 0 0 135 90M25 96A55 28 0 0 0 135 96" fill="none" stroke="#d17a50" stroke-width="3"/>
+  <ellipse cx="80" cy="62" rx="55" ry="28" fill="#d17a50" stroke="#f0ad76" stroke-width="3"/>
+  <ellipse cx="80" cy="62" rx="36" ry="18" fill="#273243" stroke="#f0ad76" stroke-width="3"/>
+  <!-- Inner curvature-coil stack -->
+  <ellipse cx="80" cy="62" rx="25" ry="13" fill="#e08a5b" stroke="#f0ad76" stroke-width="3"/>
+  <ellipse cx="80" cy="62" rx="11" ry="6" fill="#273243" stroke="#f0ad76" stroke-width="3"/>
+</svg>
