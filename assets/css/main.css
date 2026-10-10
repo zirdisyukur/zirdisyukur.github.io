@@ -2712,8 +2712,9 @@ input, select, textarea {
 	/* Hero banner: readable over the lab photograph at all viewport sizes. */
 	#main > section.one {
 		background-color: #101522;
+		background-image: linear-gradient(rgba(8, 12, 24, 0.42), rgba(8, 12, 24, 0.32)), url("/images/quantum-lab-banner.jpeg");
 		background-size: cover;
-		background-position: center 52%;
+		background-position: center center;
 		background-repeat: no-repeat;
 		position: relative;
 		isolation: isolate;
@@ -2722,23 +2723,56 @@ input, select, textarea {
 		max-width: 100%;
 	}
 	#main > section.one header {
-		max-width: 780px;
+		width: fit-content;
+		max-width: calc(100% - 2rem);
 		margin: 0 auto;
-		padding: 1.5em 1.75em;
-		background: rgba(7, 11, 22, 0.48);
-		border-radius: 8px;
-		text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
-		backdrop-filter: blur(2px);
+		padding: 1rem 1.5rem;
+		background: rgba(7, 11, 22, 0.38);
+		border-radius: 10px;
+		text-align: center;
+		text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75);
+		backdrop-filter: blur(3px);
+		-webkit-backdrop-filter: blur(3px);
 	}
-	#main > section.one h2 {
-		font-size: clamp(2rem, 4vw, 3.2rem);
-		line-height: 1.15;
-		margin-bottom: 0.45em;
+	#main > section.one .welcome-title {
+		margin: 0;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: clamp(2rem, 4.2vw, 3.6rem);
+		font-weight: 800;
+		line-height: 1.12;
+		letter-spacing: -0.035em;
+		text-wrap: balance;
 	}
-	#main > section.one p {
-		font-size: clamp(1rem, 1.7vw, 1.3rem);
+	#main > section.one .welcome-title strong {
+		font-weight: 900;
+	}
+	#logo {
+		min-height: 0;
+	}
+	#logo .image.avatar48 {
+		position: relative;
+		display: block;
+		left: auto;
+		top: auto;
+		width: 70px;
+		height: 70px;
+		margin: 0 auto 1rem;
+	}
+	#logo .image.avatar48 img {
+		display: block;
+		width: 70px;
+		height: 70px;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+	#logo h1 {
+		line-height: 1.25;
+	}
+	#logo p {
+		max-width: 100%;
+		margin-top: 0.65rem;
 		line-height: 1.55;
-		margin-bottom: 0;
+		overflow-wrap: anywhere;
 	}
 	#logo p {
 		font-size: 0.68em;
@@ -2765,12 +2799,9 @@ input, select, textarea {
 			background-position: 44% center;
 		}
 		#main > section.one header {
-			padding: 1.1em 1em;
+			padding: 0.85rem 1rem;
 		}
-		#main > section.one h2 {
-			font-size: clamp(1.8rem, 8vw, 2.5rem);
-		}
-		#main > section.one p {
-			font-size: 1rem;
+		#main > section.one .welcome-title {
+			font-size: clamp(1.8rem, 7vw, 2.5rem);
 		}
 	}
