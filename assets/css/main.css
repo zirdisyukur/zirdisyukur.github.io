@@ -2662,3 +2662,48 @@ input, select, textarea {
 		.visibledesktop{display:none;}
 	}
 
+
+	/* About Me: readable, responsive text balanced with the portrait. */
+	#about .about-copy {
+		font-size: 17px;
+		line-height: 1.7;
+		text-align: left;
+	}
+	#about .about-copy p {
+		margin-bottom: 1.1em;
+	}
+	#about .about-photo {
+		float: right;
+		width: 38%;
+		max-width: 360px;
+		height: auto;
+		margin: 0.35em 0 1.25em 1.75em;
+		border-radius: 3px;
+	}
+	#about .about-copy::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	@media screen and (max-width: 960px) {
+		#about .about-copy {
+			font-size: 16px;
+		}
+		#about .about-photo {
+			width: 40%;
+			margin-left: 1.25em;
+		}
+	}
+	@media screen and (max-width: 736px) {
+		#about .about-photo {
+			float: none;
+			display: block;
+			width: 100%;
+			max-width: 360px;
+			margin: 0 auto 1.5em;
+		}
+		#about .about-copy {
+			font-size: 16px;
+			line-height: 1.7;
+		}
+	}
