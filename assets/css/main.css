@@ -2268,7 +2268,7 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #81918E;
-				background-image: url("../../images/earth.jpeg");
+				background-image: linear-gradient(rgba(8, 12, 24, 0.58), rgba(8, 12, 24, 0.48)), url("../../images/quantum-lab-banner.jpeg");
 			}
 
 			#main > section.two {
@@ -2705,5 +2705,72 @@ input, select, textarea {
 		#about .about-copy {
 			font-size: 16px;
 			line-height: 1.7;
+		}
+	}
+
+
+	/* Hero banner: readable over the lab photograph at all viewport sizes. */
+	#main > section.one {
+		background-color: #101522;
+		background-size: cover;
+		background-position: center 52%;
+		background-repeat: no-repeat;
+		position: relative;
+		isolation: isolate;
+	}
+	#main > section.one .container {
+		max-width: 100%;
+	}
+	#main > section.one header {
+		max-width: 780px;
+		margin: 0 auto;
+		padding: 1.5em 1.75em;
+		background: rgba(7, 11, 22, 0.48);
+		border-radius: 8px;
+		text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+		backdrop-filter: blur(2px);
+	}
+	#main > section.one h2 {
+		font-size: clamp(2rem, 4vw, 3.2rem);
+		line-height: 1.15;
+		margin-bottom: 0.45em;
+	}
+	#main > section.one p {
+		font-size: clamp(1rem, 1.7vw, 1.3rem);
+		line-height: 1.55;
+		margin-bottom: 0;
+	}
+	#logo p {
+		font-size: 0.68em;
+		line-height: 1.5em;
+		max-width: 100%;
+		text-wrap: balance;
+	}
+	@media screen and (max-width: 960px) {
+		#logo p {
+			font-size: 0.72em;
+		}
+		#main > section.one.cover {
+			padding: 9em 1.25em;
+			background-position: 48% center;
+		}
+		#main > section.one header {
+			padding: 1.25em 1.1em;
+		}
+	}
+	@media screen and (max-width: 736px) {
+		#main > section.one.cover {
+			min-height: 70vh;
+			padding: 7em 1em;
+			background-position: 44% center;
+		}
+		#main > section.one header {
+			padding: 1.1em 1em;
+		}
+		#main > section.one h2 {
+			font-size: clamp(1.8rem, 8vw, 2.5rem);
+		}
+		#main > section.one p {
+			font-size: 1rem;
 		}
 	}
