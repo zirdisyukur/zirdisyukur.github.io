@@ -2749,29 +2749,43 @@ input, select, textarea {
 	#logo {
 		min-height: 0;
 	}
+	#logo .profile-summary {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		text-align: left;
+	}
 	#logo .image.avatar48 {
 		position: relative;
 		display: block;
+		flex: 0 0 64px;
 		left: auto;
 		top: auto;
-		width: 70px;
-		height: 70px;
-		margin: 0 auto 1rem;
+		width: 64px;
+		height: 64px;
+		margin: 0;
 	}
 	#logo .image.avatar48 img {
 		display: block;
-		width: 70px;
-		height: 70px;
+		width: 64px;
+		height: 64px;
 		object-fit: cover;
 		border-radius: 50%;
 	}
+	#logo .profile-copy {
+		flex: 1 1 auto;
+		min-width: 0;
+	}
 	#logo h1 {
 		line-height: 1.25;
+		font-size: 1em;
+		margin: 0 0 0.35rem;
 	}
 	#logo p {
 		max-width: 100%;
-		margin-top: 0.65rem;
-		line-height: 1.55;
+		margin: 0;
+		font-size: 0.68em;
+		line-height: 1.5;
 		overflow-wrap: anywhere;
 	}
 	#logo p {
