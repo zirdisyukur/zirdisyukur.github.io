@@ -262,7 +262,13 @@
 					else {
 						var $pdf = $('<iframe class="publication-pdf" title="Document preview"></iframe>');
 						if (kind === 'video')
-							$pdf.attr({ src: media + '?autoplay=0&rel=0', title: 'YouTube video player', referrerpolicy: 'strict-origin-when-cross-origin', allow: 'encrypted-media; picture-in-picture', allowfullscreen: 'allowfullscreen' });
+							$pdf.attr({
+								src: media + '?autoplay=0&rel=0',
+								title: 'YouTube video player',
+								referrerpolicy: 'strict-origin-when-cross-origin',
+								allow: 'encrypted-media; picture-in-picture',
+								allowfullscreen: 'allowfullscreen'
+							});
 						else
 						$pdf.attr('src', media + '#toolbar=1&navpanes=1&view=FitH');
 						$media.append($pdf);

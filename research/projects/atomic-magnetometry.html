@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+    content="QEP 2.0 atomic magnetometer project by M. Zirdi Syukur at A*STAR Q.InC." />
+    <title>QEP 2.0 Atomic Magnetometer | M. Zirdi Syukur</title>
+    <link rel="stylesheet" href="../research.css" />
+  </head>
+  <body>
+    <!-- Shared project navigation. -->
+    <aside class="research-sidebar">
+      <div>
+        <img src="../../images/mzs-profile.png" alt="Portrait of M. Zirdi Syukur" />
+        <section>
+          <h2>M. Zirdi Syukur</h2>
+          <p>Research notebook</p>
+        </section>
+      </div>
+      <nav aria-label="Research navigation">
+        <a href="../../index.html">Main website</a>
+        <a class="nav-group" href="../../quantum-research-notebook.html#projects">All Research
+        Projects</a>
+        <a class="project-nav-link is-current"
+        href="../../research/projects/atomic-magnetometry.html">QEP 2.0 Atomic Magnetometer</a>
+        <a class="project-nav-link" href="../../research/projects/nqr-rf-magnetometer.html">NQR RF
+        Magnetometer</a>
+        <a class="project-nav-link" href="../../research/projects/hybrid-optical-pumping.html">
+        Hybrid Optical Pumping</a>
+        <a class="project-nav-link"
+        href="../../research/projects/low-noise-magnetometry-electronics.html">Low Noise
+        Electronics</a>
+        <a class="project-nav-link" href="../../research/projects/cold-atom-electromagnet.html">
+        Electromagnet for Cold Atoms</a>
+        <a class="project-nav-link" href="../../research/projects/radio-astronomy.html">Radio
+        Telescope</a>
+      </nav>
+    </aside>
+    <div class="research-main">
+      <main class="detail-page research-wrap">
+        <!-- Project banner: title, summary, and icon. -->
+        <header class="detail-hero">
+          <div>
+            <p class="research-kicker">Atomic magnetometry · A*STAR Q.InC</p>
+            <h1>QEP 2.0 Atomic Magnetometer</h1>
+            <p class="lead">Building a scalar atomic magnetometer capable of femtotesla-sensitive
+            measurement.</p>
+          </div>
+          <div class="detail-hero-art">
+            <img src="../../images/project-atomic-magnetometer.svg"
+            alt="Atomic magnetometer project illustration" />
+          </div>
+        </header>
+        <!-- At-a-glance summary: abstract and contribution. -->
+        <div class="detail-content">
+          <section class="detail-panel">
+            <h2>Project Abstract</h2>
+            <p>At A*STAR Q.InC, I built and tested a prototypical scalar atomic
+            magnetometer. We report a sensitivity as low as 10 fT/√Hz on an
+            applied field of about 10 μT, corresponding to an effective signal-to-noise ratio of
+            about one part per billion. Moreover, we expect a theorhetical maximal sensitivity of
+             1 fT/√Hz. This technology has applications in geomagnetic surveys, fundamental
+            physics, nuclear magnetic resonance (NMR), magnetic resonance imaging (MRI), 
+            nuclear quadrupole resonance (NQR), and many more (some of which explored in other
+             projects in this notebook). </p>
+            <p>At its core, the sensor uses potassium vapour in a thermal cell; The fundamental 
+            sensing scheme utilises the precession of electronic 
+            spin under the presence of a magnetic field. Then, the magnetic sensitivity is assessed
+            from the spectral density of a 
+            lock-in-amplified probe beam whos linear polarisation rotates resonantly with the atomic precession.</p>
+            <div class="detail-actions">
+              <a class="research-button" href="../assets/qep-2.0-magnetometer-poster.pptx"
+              download="">Download project poster</a>
+            </div>
+          </section>
+          <aside class="detail-panel">
+            <h2>Contribution &amp; Recognition</h2>
+            <p>This work was a a collaboration of myself, Dr. Junyi Lee, and Md. Danial Afiq at A*STAR's Q.InC. 
+              My contribution primarily involved the calibration, optimisation, and operation of
+               the magnetometer. Additional tasks included degaussing the magnetic shields, programming
+               automated data collection and analysis, and occasionally the engineering and assembly of 
+               the experiment.</p>
+            <figure class="detail-qinc-brand">
+              <img src="../../images/qinc-logo.webp"
+              alt="A*STAR Quantum Innovation Centre (Q.InC) logo" />
+            </figure>
+          </aside>
+        </div>
+        <!-- Expandable project background, results, methods, and citations. -->
+        <section class="detail-accordions" aria-label="Project details">
+          <details class="detail-accordion">
+            <summary>Background And Motivation</summary>
+            <div>
+              <p>In the classical picture, the atomic ensemble’s spin-polarisation vector precesses
+              about the applied magnetic field. With a signed gyromagnetic ratio γ, its evolution
+              is described by:</p>
+              <div class="equation-line">
+                <div class="equation-scroll" role="math" aria-label="Spin vector time derivative equals gamma times the cross-product matrix of magnetic field and spin vector">
+                  <span class="math-frac"><span>d𝐒</span><span>dt</span></span>
+                  <span>=</span>
+                  <span class="math-italic">γ</span>
+                  <span class="math-matrix" aria-label="cross-product matrix">
+                    <span>0</span><span>B<sub>z</sub></span><span>−B<sub>y</sub></span>
+                    <span>−B<sub>z</sub></span><span>0</span><span>B<sub>x</sub></span>
+                    <span>B<sub>y</sub></span><span>−B<sub>x</sub></span><span>0</span>
+                  </span>
+                  <span class="math-vector">
+                    <span>S<sub>x</sub></span><span>S<sub>y</sub></span><span>S<sub>z</sub></span>
+                  </span>
+                </div>
+                <button class="copy-latex" type="button"
+                  data-latex="\frac{d\mathbf{S}}{dt}=\gamma\begin{pmatrix}0&amp;B_z&amp;-B_y\\-B_z&amp;0&amp;B_x\\B_y&amp;-B_x&amp;0\end{pmatrix}\begin{pmatrix}S_x\\S_y\\S_z\end{pmatrix}">
+                Copy LaTeX</button>
+              </div>
+              <span class="copy-latex-status" aria-live="polite"></span>
+              <p>For a field along z, the transverse spin components rotate at the Larmor
+              frequency, |ω
+              <sub>L</sub>| = |γ|B. The probe beam reads out the evolving spin polarisation as an
+              optical rotation signal.</p>
+            </div>
+          </details>
+          <details class="detail-accordion">
+            <summary>Results And Next Steps</summary>
+            <div>
+              <p>The updated poster reports sensitivity down to 10 fT/√Hz under an applied field of
+              about 10 μT. The magnetic spectral-density plot compares on- and off-resonance
+              measurements, marking 8.5 × 10³ fT/√Hz at low frequency, 24 fT/√Hz near 1 kHz, and
+              the 3 dB bandwidth.</p>
+              <p>Ultimately, we believe our achievable sensitivity is closer to the theorhetically predicted
+            optimal, however calibration errors and noisy electronics limited our ability to validated that claim.
+            We note that at low frequencies, noise from the current source remains a key limitation: 75 nA/√Hz at 1 Hz,
+             compared with a target below 0.4 nA/√Hz. The
+            proposed next steps include a quieter current source, gradiometric measurements to
+            reduce common-mode 1/f noise, digital signal processing to address aliasing, and larger
+            probe beams and optimized detuning.</p>
+              <figure class="detail-overview-plot">
+                <img src="../../images/qep-magnetometer-magnetic-noise.png"
+                alt="Magnetic spectral density versus frequency, comparing off-resonance and on-resonance measurements" />
+                <figcaption>Magnetic spectral density measured with the magnetometer; sensitivity
+                values and 3 dB bandwidth are marked.</figcaption>
+              </figure>
+              <p>Low-frequency current-source noise remains the main limitation. Next steps include
+              quieter drive electronics, gradiometric readout, and improved signal processing.</p>
+            </div>
+          </details>
+          <details class="detail-accordion">
+            <summary>Methodology</summary>
+            <div>
+              <p>The diagram shows a potassium-vapour cell at the centre of a magnetic shield. Two
+              laser beams interact with the atoms: the pump beam prepares their spin polarisation,
+              and the probe beam measures how that polarisation changes in a magnetic field.</p>
+              <figure class="method-diagram">
+                <img
+                  src="../../images/qep-magnetometer-methodology.png"
+                  alt="Optical and electronic layout of the atomic magnetometer, with pump and probe beams passing through a shielded vapour cell"
+                />
+                <figcaption>Optical paths, shielded sensor, coils, and readout for the atomic magnetometer.</figcaption>
+              </figure>
+              <h3>Optical paths and sensor</h3>
+              <ul>
+                <li><strong>Pump laser (left):</strong> its beam is routed by mirrors through an
+                isolator and wave plates, then sent horizontally through the cell. The wave plates
+                set the light polarisation needed to optically pump the potassium atoms. The
+                isolator reduces back-reflections into the laser.</li>
+                <li><strong>Probe laser (right):</strong> a separate beam travels through an
+                isolator and the polarisation-maintaining fibre (PMF), then through the cell along
+                a perpendicular direction. The quarter-wave plate and other polarisation optics
+                prepare and analyse the probe polarisation.</li>
+                <li><strong>Vapour cell:</strong> potassium atoms in the heated cell acquire a
+                collective spin from the pump beam. The probe’s polarisation rotates slightly as
+                it passes through the spin-polarised vapour; that rotation is the magnetic-field
+                signal.</li>
+                <li><strong>Magnetic shield:</strong> the enclosure reduces ambient magnetic
+                fields and interference, allowing the controlled field and the cell’s response to
+                be measured more reliably.</li>
+              </ul>
+              <h3>Field control and readout</h3>
+              <ul>
+                <li><strong>XYZ coils:</strong> the coils around the cell apply and adjust fields
+                along the three axes. The diagram marks a bias field of about 10 μT; the By coil
+                also receives an RF drive to excite the atomic spin response, while the Bz coil is
+                driven by a current source.</li>
+                <li><strong>Polarising beam splitter (PDB in the diagram):</strong> separates the
+                probe’s orthogonal polarisation components onto two photodetectors.</li>
+                <li><strong>Photodetectors and lock-in amplifier:</strong> the detector signals
+                are differenced to extract the small polarisation-rotation signal. The lock-in
+                amplifier uses the RF reference to isolate the response at the drive frequency and
+                reject unrelated noise.</li>
+                <li><strong>RF drive and current source:</strong> provide the controlled oscillating
+                and static coil currents. Their stability and noise directly affect the measured
+                sensitivity.</li>
+              </ul>
+              <p>In practice, the pump and probe powers and polarisations are tuned, the magnetic
+              shield is degaussed, and the coil currents and lock-in gain are set before measuring
+              the probe signal over frequency.</p>
+            </div>
+          </details>
+          <details class="detail-accordion">
+            <summary>Citations</summary>
+            <div>
+              <p>A*STAR Q.InC sensing research: 
+              <a target="_blank" rel="noopener"
+              href="https://www.a-star.edu.sg/qinc/research/sensing">Q.InC sensing research ↗</a>.
+              Project poster: M. Zirdi Syukur, Md. Danial Afiq, and Junyi Lee.</p>
+            </div>
+          </details>
+        </section>
+        <!-- Project media and supporting figures. -->
+        <section class="detail-evidence">
+          <div class="section-heading">
+            <h2>Apparatus And Results</h2>
+            <p>Photographs and noise measurements from the project poster.</p>
+          </div>
+          <div class="detail-media-grid qep-detail-grid">
+            <figure class="detail-media-card">
+              <img src="../../images/qep-magnetometer-sensor-mount.png"
+              alt="Thermal vapour cell assembly in its mount, viewed through a circular optical port" />
+              <figcaption>Thermal vapour cell in situ.</figcaption>
+            </figure>
+            <figure class="detail-media-card">
+              <img src="../../images/qep-magnetometer-shielding.png"
+              alt="Magnetic shield used for magnetometer characterisation" />
+              <figcaption>Magnetic shield for magnetometer characterisation.</figcaption>
+            </figure>
+            <figure class="detail-media-card qep-plot">
+              <img src="../../images/qep-magnetometer-current-noise.png"
+              alt="Current spectral density versus frequency, comparing current source conditions" />
+              <figcaption>Current-source spectral density. Discrete peaks are identified in the
+              poster as likely noise coupling.</figcaption>
+            </figure>
+          </div>
+        </section>
+      </main>
+      <footer class="research-footer">
+        <div class="research-wrap">
+          <span>M. Zirdi Syukur · QEP 2.0</span>
+          <a href="mailto:mohammad.syukur@physics.ox.ac.uk">Contact</a>
+        </div>
+      </footer>
+    </div>
+      <!-- Copy source for the displayed spin-precession equation. -->
+      <script>
+        document.querySelectorAll('.copy-latex').forEach((button) => {
+          button.addEventListener('click', async () => {
+            const latex = button.dataset.latex;
+            let copied = false;
+
+            try {
+              if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(latex);
+                copied = true;
+              } else {
+                const field = document.createElement('textarea');
+                field.value = latex;
+                field.style.position = 'fixed';
+                field.style.opacity = '0';
+                document.body.appendChild(field);
+                field.select();
+                copied = document.execCommand('copy');
+                field.remove();
+              }
+            } catch (_) {
+              copied = false;
+            }
+
+            const status = button.closest('.detail-accordion').querySelector('.copy-latex-status');
+            status.textContent = copied
+              ? 'LaTeX copied to clipboard.'
+              : 'Unable to copy the LaTeX source.';
+          });
+        });
+      </script>
+  </body>
+</html>
