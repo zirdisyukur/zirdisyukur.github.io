@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Hybrid optical pumping experiment by M. Zirdi Syukur." />
+    <meta name="description" content="Hybrid optical pumping research by M. Zirdi Syukur at A*STAR Q.InC." />
     <title>Hybrid Optical Pumping | M. Zirdi Syukur</title>
     <link rel="stylesheet" href="../research.css" />
   </head>
@@ -19,98 +19,114 @@
       </div>
       <nav aria-label="Research navigation">
         <a href="../../index.html">Main website</a>
-        <a class="nav-group" href="../../quantum-research-notebook.html#projects">All Research
-        Projects</a>
-        <a class="project-nav-link" href="../../research/projects/atomic-magnetometry.html">QEP 2.0
-        Atomic Magnetometer</a>
-        <a class="project-nav-link" href="../../research/projects/nqr-rf-magnetometer.html">NQR RF
-        Magnetometer</a>
-        <a class="project-nav-link is-current"
-        href="../../research/projects/hybrid-optical-pumping.html">Hybrid Optical Pumping</a>
-        <a class="project-nav-link"
-        href="../../research/projects/low-noise-magnetometry-electronics.html">Low Noise
-        Electronics</a>
-        <a class="project-nav-link" href="../../research/projects/cold-atom-electromagnet.html">
-        Electromagnet for Cold Atoms</a>
-        <a class="project-nav-link" href="../../research/projects/radio-astronomy.html">Radio
-        Telescope</a>
+        <a class="nav-group" href="../../quantum-research-notebook.html#projects">All Research Projects</a>
+        <a class="project-nav-link" href="atomic-magnetometry.html">QEP 2.0 Atomic Magnetometer</a>
+        <a class="project-nav-link" href="nqr-rf-magnetometer.html">NQR RF Magnetometer</a>
+        <a class="project-nav-link is-current" href="hybrid-optical-pumping.html" aria-current="page">Hybrid Optical Pumping</a>
+        <a class="project-nav-link" href="low-noise-magnetometry-electronics.html">Low Noise Electronics</a>
+        <a class="project-nav-link" href="cold-atom-electromagnet.html">Electromagnet for Cold Atoms</a>
+        <a class="project-nav-link" href="radio-astronomy.html">Radio Telescope</a>
       </nav>
     </aside>
+
     <div class="research-main">
       <main class="detail-page research-wrap">
         <!-- Project banner: title, summary, and icon. -->
         <header class="detail-hero">
           <div>
-            <p class="research-kicker">Alkali-vapour cells · Optical pumping</p>
+            <p class="research-kicker">Atomic Vapor Cell Group · Quantum Innovation Centre</p>
             <h1>Hybrid Optical Pumping</h1>
-            <p class="lead">Investigating how hybrid pumping behaves as the relative densities of
-            two atomic species change.</p>
+            <p class="lead">Testing how density imbalance affects spin-temperature equilibrium and polarization transfer in hybrid alkali-vapour cells.</p>
           </div>
           <div class="detail-hero-art">
-            <img src="../../images/project-hybrid-pumping.svg"
-            alt="Hybrid vapour cell project illustration" />
+            <img src="../../images/project-hybrid-pumping.svg" alt="Hybrid vapour cell project illustration" />
           </div>
         </header>
-        <!-- At-a-glance summary: abstract and contribution. -->
+
+        <!-- At-a-glance summary: project abstract and contribution. -->
         <div class="detail-content">
           <section class="detail-panel">
             <h2>Project Abstract</h2>
-            <p>I designed an experiment to investigate and test common assumptions made about
-            spin-temperature equilibrium in hybrid alkali-vapour cells. Hybrid pumping can increase
-            the uniformity and sensitivity of atomic sensors.</p>
-            <p>We aimed to observe experimentally how the technique’s efficiency diminishes beyond
-            a certain ratio of densities within a hybrid vapour cell. The longer-term goal is to
-            improve vapour-cell uniformity and support more sensitive atomic magnetometers.</p>
+            <p>At A*STAR Q.InC, I designed an experiment to investigate a common assumption in hybrid alkali-vapour cells: that spin-exchange collisions maintain spin-temperature equilibrium between the atomic species. Hybrid pumping optically pumps a donor species that is relatively optically thin; collisions then transfer polarization to a receiver species that is optically thick, helping produce more uniform polarization while preserving the receiver's signal coherence.</p>
+            <p>We focused on how this picture changes when the species densities become strongly imbalanced. Because spin-exchange rates depend on density and collisional cross-section, reducing the potassium density to improve pumping uniformity may cause the potassium and rubidium polarizations to diverge. The experiment was designed to measure both species' densities and polarization across cells with different density ratios.</p>
+            <p>The longer-term aim is to understand when hybrid pumping remains effective and use that knowledge to improve vapour-cell uniformity and atomic-magnetometer sensitivity.</p>
           </section>
           <aside class="detail-panel">
             <h2>Contribution &amp; Recognition</h2>
-            <p>I designed the experiment and its measurement approach to test spin-temperature
-            equilibrium assumptions in a dual-species vapour cell. The work is presented here as a
-            research contribution; collaborator and recognition details can be added when
-            confirmed.</p>
+            <p>I developed the experimental plan for comparing hybrid cells with different potassium-to-rubidium density ratios. The work brought together cell fabrication, absorption-based density measurements, and two polarization measurement approaches, using potassium and rubidium readout.</p>
+            <p>This project was carried out with the Atomic Vapor Cell Group at A*STAR's Quantum Innovation Centre (Q.InC). The supplied project materials do not identify a separate award or formal recognition.</p>
           </aside>
         </div>
+
         <!-- Expandable project background, results, methods, and citations. -->
         <section class="detail-accordions" aria-label="Project details">
           <details class="detail-accordion">
             <summary>Background And Motivation</summary>
             <div>
-              <p>Hybrid pumping transfers spin polarisation between atomic species through
-              collisions. It can improve pumping uniformity and sensor sensitivity, while its
-              effectiveness may depend on the relative species densities.</p>
+              <p>Optical pumping uses resonant light to create a preferred spin orientation in an atomic ensemble. In a hybrid cell, light can pump one species directly while spin-exchange collisions transfer polarization to a second species. This is useful when the receiver absorbs pump light strongly: direct pumping may polarize only atoms near the illuminated region, whereas polarization transfer can help produce a more uniform spin state throughout the cell.</p>
+              <p>Many treatments assume the two species reach spin-temperature equilibrium. The presentation highlights a possible limit to that assumption: the spin-exchange rate scales with the density of collision partners and the relevant collision cross-section. If the potassium density is made much smaller than the rubidium density, the rates linking the two ensembles may no longer keep their polarizations aligned. Measuring both densities and both polarizations across a range of cell compositions tests where this approximation begins to fail.</p>
             </div>
           </details>
+
           <details class="detail-accordion">
             <summary>Results And Next Steps</summary>
             <div>
-              <p>The experiment was designed to test how hybrid-pumping efficiency changes as the
-              density ratio varies. The longer-term aim is to improve vapour-cell uniformity and
-              support more sensitive atomic magnetometers.</p>
+              <p>Initial cell-characterization work includes potassium absorption scans and an absorption-fit estimate of the rubidium number density in the Elsa cell: approximately 1.141 × 10<sup>14</sup> cm<sup>−3</sup> in the supplied 23 July 2025 analysis. The characterization figures also document potassium transmission/absorption and measured magnetic-field gradients across the probe, pump, and cell axes.</p>
+              <p>A supplied polarization estimate compares 100 °C and 150 °C operation as pump power increases. It suggests that polarization rises with pump power in both cases, reaching roughly 0.9 at the upper end of the plotted range. This is an estimate, not a direct measurement of the density-ratio dependence that motivates the project.</p>
+              <p>The central next step is to complete matched density and polarization measurements for the planned cell set, then compare potassium and rubidium polarization against the measured density ratio. This will establish whether and where the spin-temperature approximation breaks down, and how that affects hybrid-pumping uniformity.</p>
             </div>
           </details>
+
           <details class="detail-accordion">
             <summary>Methodology</summary>
             <div>
-              <p>I designed an experiment to investigate assumptions about spin-temperature
-              equilibrium and to observe the limits of hybrid pumping in a dual-species vapour
-              cell.</p>
+              <h3>Cell and density characterization</h3>
+              <p>The project plan called for hybrid vapour cells with different potassium-to-rubidium density ratios. Absorption spectroscopy provides an estimate of each species' number density. For the potassium characterization shown here, the cell is heated, a potassium laser is sent through the cell, and its frequency is swept across an absorption resonance. Comparing the transmitted signal with a reference scan reveals the absorption line, which can be fitted to estimate the vapour density.</p>
+              <p>The supplied Elsa analysis includes a rubidium absorption fit and a potassium D1 absorption scan. These characterize the cell and measurement response; they do not by themselves establish the final relationship between density ratio and hybrid-pumping efficiency.</p>
+              <h3>Polarization and field measurements</h3>
+              <p>The planned comparison measures polarization through two routes: one using potassium and one using rubidium. Faraday rotation provides an optical readout of the atoms' spin polarization. Recording both species allows their polarization to be compared directly as the density ratio changes.</p>
+              <p>Magnetic-field gradients across the cell are also characterized because spatial field variation can affect the measured resonance and polarization. The supplied gradient plot reports the fitted field variation along the probe, pump, and third cell axis, providing a map of an important experimental condition.</p>
             </div>
           </details>
+
           <details class="detail-accordion">
             <summary>Citations</summary>
             <div>
-              <p>Project-specific references will be added here.</p>
+              <p>“Hybrid Pumping Research Project – Atomic Vapor Cell Group,” project presentation, A*STAR Quantum Innovation Centre (Q.InC), 29 January 2026.</p>
+              <p>“Hybrid Pumping Cell Characterization,” experimental analysis and measurement notes, including Elsa potassium and rubidium absorption scans.</p>
             </div>
           </details>
         </section>
-        <!-- Project media and supporting figures. -->
-        <div class="detail-media-grid">
-          <figure class="detail-media-card">
-            <img src="../../images/research-gallery-05.jpg"
-            alt="Optical table used for a hybrid pumping experiment" />
-            <figcaption>Optical table for the hybrid pumping experiment.</figcaption>
-          </figure>
-        </div>
+
+        <!-- Selected cell-characterization and polarization figures. -->
+        <section class="detail-evidence">
+          <div class="section-heading">
+            <h2>Cell Characterization</h2>
+            <p>Selected absorption, density, polarization, and field-gradient plots from the supplied project materials.</p>
+          </div>
+          <div class="detail-media-grid hybrid-result-grid">
+            <figure class="detail-media-card">
+              <img src="../../images/hybrid-pumping-rb-density-fit.png" alt="Rubidium density analysis showing an absorption fit and estimated density of 1.141 times 10 to the 14 per cubic centimetre" />
+              <figcaption>Elsa-cell rubidium absorption analysis; the fit reports an estimated number density of 1.141 × 10<sup>14</sup> cm<sup>−3</sup>.</figcaption>
+            </figure>
+            <figure class="detail-media-card">
+              <img src="../../images/hybrid-pumping-k-absorption.png" alt="Potassium normalized transmission and absorption scans across the D1 resonance" />
+              <figcaption>Potassium D1 cell characterization: normalized transmission and the corresponding absorption fit.</figcaption>
+            </figure>
+            <figure class="detail-media-card">
+              <img src="../../images/hybrid-pumping-polarization-estimate.png" alt="Estimated alkali polarization versus pump power at 100 and 150 degrees Celsius" />
+              <figcaption>Estimated polarization versus pump power at 100 °C and 150 °C. Both curves rise with pump power; these are estimates, not the final density-ratio measurement.</figcaption>
+            </figure>
+            <figure class="detail-media-card">
+              <img src="../../images/hybrid-pumping-field-gradients.png" alt="Nine fitted magnetic field gradients across three axes of the hybrid vapour cell" />
+              <figcaption>Measured magnetic-field gradients along the probe direction (x), pump direction (y), and third cell axis (z).</figcaption>
+            </figure>
+            <figure class="detail-media-card">
+              <img src="../../images/research-gallery-05.jpg" alt="Optical table used for a hybrid pumping experiment" />
+              <figcaption>Optical table for the hybrid-pumping experiment.</figcaption>
+            </figure>
+          </div>
+        </section>
       </main>
       <footer class="research-footer">
         <div class="research-wrap">

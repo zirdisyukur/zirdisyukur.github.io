@@ -405,6 +405,14 @@ a {
   background: #e9edef;
 }
 
+/* Preserve the source proportions and dark plotting canvas for hybrid-pumping data. */
+.hybrid-result-grid .detail-media-card img {
+  height: 18rem;
+  padding: .35rem;
+  object-fit: contain;
+  background: #101215;
+}
+
 .detail-media-card figcaption {
   padding: .6rem .75rem;
   color: var(--muted);
