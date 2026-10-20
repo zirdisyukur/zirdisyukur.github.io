@@ -211,6 +211,34 @@ a {
   height: 8.5rem;
   place-items: center;
   background: #e9edef;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Fade each project's photo behind its icon; cards without a photo retain the gray fill. */
+.project-card-art.art-atomic {
+  background-image: linear-gradient(rgba(233,237,239,.58), rgba(233,237,239,.58)),
+    url("../images/qep-magnetometer-shielding-home.png");
+}
+
+.project-card-art.art-nqr {
+  background-image: linear-gradient(rgba(233,237,239,.58), rgba(233,237,239,.58)),
+    url("../images/research-gallery-02.jpg");
+}
+
+.project-card-art.art-hybrid {
+  background-image: linear-gradient(rgba(233,237,239,.58), rgba(233,237,239,.58)),
+    url("../images/research-gallery-05.jpg");
+}
+
+.project-card-art.art-cold-atoms {
+  background-image: linear-gradient(rgba(233,237,239,.58), rgba(233,237,239,.58)),
+    url("../images/electromagnet-coil-assembly.png");
+}
+
+.project-card-art.art-radio {
+  background-image: linear-gradient(rgba(233,237,239,.58), rgba(233,237,239,.58)),
+    url("../images/telescopeselfie.jpeg");
 }
 
 .project-card-art img {
@@ -405,10 +433,56 @@ a {
   background: #e9edef;
 }
 
+.nqr-design-grid .detail-media-card img {
+  height: 16rem;
+  object-fit: contain;
+  background: #f7f8f8;
+}
+
+.nqr-background-figure {
+  width: 100%;
+  margin: 0;
+}
+
+.nqr-background-figure img {
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+}
+
+.nqr-frequency-reference {
+  width: 100%;
+  margin: 0;
+}
+
+.nqr-frequency-reference img {
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+}
+
+.nqr-frequency-bandwidth {
+  width: 100%;
+  margin: 0;
+}
+
+.nqr-frequency-bandwidth img {
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+}
+
 /* Preserve the source proportions and dark plotting canvas for hybrid-pumping data. */
 .hybrid-result-grid .detail-media-card img {
   height: 18rem;
   padding: .35rem;
+  object-fit: contain;
+  background: #101215;
+}
+
+.atomic-background-figures .detail-media-card img {
+  height: 15rem;
+  padding: .5rem;
   object-fit: contain;
   background: #101215;
 }
@@ -430,7 +504,8 @@ a {
 }
 
 .detail-overview-plot {
-  margin: 1.15rem 0;
+  width: 50%;
+  margin: 1.15rem auto;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: .45rem;
@@ -452,8 +527,9 @@ a {
 
 /* Full-width optical layout used inside the magnetometer methodology accordion. */
 .method-diagram {
-  max-width: 48rem;
-  margin: 1rem 0 1.25rem;
+  width: min(100%, 68rem);
+  max-width: 68rem;
+  margin: 1rem auto 1.25rem;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: .45rem;
@@ -556,125 +632,16 @@ a {
 .detail-accordion > div {
   padding: 0 1.1rem 1rem;
   color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .detail-accordion p {
   margin: 0;
 }
 
-.equation-line {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin: .65rem 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-
-.equation-scroll {
-  display: inline-flex;
-  flex: 1 1 auto;
-  min-width: 0;
-  align-items: center;
-  justify-content: center;
-  gap: .65rem;
-  overflow-x: auto;
-  color: inherit;
-  font: 1.25rem/1.25 Georgia, "Times New Roman", serif;
-  white-space: nowrap;
-}
-
-.math-italic {
-  font-style: italic;
-}
-
-.math-frac {
-  display: inline-grid;
-  grid-template-rows: auto auto;
-  justify-items: center;
-  vertical-align: middle;
-  font-size: .88em;
-  line-height: 1.05;
-}
-
-.math-frac > span:first-child {
-  padding: 0 .12em .08em;
-  border-bottom: 1px solid currentColor;
-}
-
-.math-frac > span:last-child {
-  padding-top: .08em;
-}
-
-.math-matrix, .math-vector {
-  position: relative;
-  display: inline-grid;
-  align-items: center;
-  padding: .28em .48em;
-  line-height: 1.35;
-}
-
-.math-matrix {
-  grid-template-columns: repeat(3, auto);
-  gap: .08em .62em;
-}
-
-.math-matrix::before, .math-matrix::after, .math-vector::before, .math-vector::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: .22em;
-  content: "";
-}
-
-.math-matrix::before, .math-vector::before {
-  left: 0;
-  border: 1px solid currentColor;
-  border-right: 0;
-}
-
-.math-matrix::after, .math-vector::after {
-  right: 0;
-  border: 1px solid currentColor;
-  border-left: 0;
-}
-
-.math-vector {
-  grid-template-columns: auto;
-  gap: .08em;
-}
-
-.math-matrix sub, .math-vector sub {
-  font-size: .66em;
-}
-
-.copy-latex {
-  flex: 0 0 auto;
-  padding: .38rem .58rem;
-  border: 1px solid #bdc6ca;
-  border-radius: .3rem;
-  background: #fff;
-  color: #4b5b64;
-  font: 600 .75rem/1.2 "Source Sans Pro", sans-serif;
-  cursor: pointer;
-}
-
-.copy-latex:hover, .copy-latex:focus-visible {
-  border-color: #a94b5f;
-  color: #8f3e51;
-}
-
-.copy-latex-status {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+.detail-accordion p + p {
+  margin-top: .75rem;
 }
 
 .research-button.secondary {
@@ -763,6 +730,10 @@ a {
 
   .detail-content {
     grid-template-columns: 1fr;
+  }
+
+  .detail-overview-plot {
+    width: 100%;
   }
 }
 

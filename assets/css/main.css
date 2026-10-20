@@ -3065,6 +3065,13 @@ input, select, textarea {
 .research-more-button {
   margin-top: .25rem !important;
 }
+.research-project-list-heading {
+  margin: 2rem 0 .65rem;
+  color: #555;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-align: left;
+}
 .project-reference {
   margin-top: 1rem !important;
   padding-top: .65rem;

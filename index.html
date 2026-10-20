@@ -36,13 +36,13 @@
 								<li class="research-nav-item">
 									<a href="#portfolio" id="portfolio-link" aria-expanded="false" aria-controls="research-subnav"><span class="icon solid fa-atom">Research</span></a>
 									<ul id="research-subnav" class="research-subnav" hidden>
+										<li><a href="quantum-research-notebook.html">Research Website</a></li>
 										<li><a href="#atomic-magnetometer">Atomic Magnetometer</a></li>
 										<li><a href="#nqr-magnetometer">NQR RF Magnetometer</a></li>
 										<li><a href="#hybrid-pumping">Hybrid Optical Pumping of Dual-Atomic Vapours</a></li>
 										<li><a href="#low-noise-electronics">Low Noise Electronics for Magnetometry</a></li>
 										<li><a href="#cold-atoms">Electromagnet for Cold Atoms</a></li>
 										<li><a href="#radio-astronomy">Radio Astronomy</a></li>
-										<li><a href="quantum-research-notebook.html">More</a></li>
 									</ul>
 								</li>
 								<li><a href="#CV" id="cv-link"><span class="icon solid fa-file-pdf">Curriculum Vitae</span></a></li>
@@ -143,6 +143,20 @@
 							</div>
 
 							<!-- Each research summary links to its standalone project page. -->
+							<details class="research-project research-more" id="research-more" open>
+								<summary>
+									<img class="project-icon" src="images/project-more.svg" alt="" />
+									<span>
+										<strong>Research Website</strong>
+										<small>Find all of my projects in one organized notebook</small>
+									</span>
+								</summary>
+								<div class="research-project-content">
+									<p>Explore a broader overview of my research interests, selected projects, and future work in quantum technologies.</p>
+									<a class="button research-more-button" href="quantum-research-notebook.html">Visit the research website</a>
+								</div>
+							</details>
+							<h3 class="research-project-list-heading">Selected Projects</h3>
 							<details class="research-project" id="atomic-magnetometer">
 								<summary>
 									<img class="project-icon" src="images/project-atomic-magnetometer.svg" alt="" />
@@ -154,13 +168,13 @@
 								<div class="research-project-content">
 									<div class="qep-home-overview">
 										<div class="qep-home-copy">
-											<p>At A*STAR Q.InC, I built and tested a prototype potassium-vapour magnetometer capable of sensitivity
-												as low as 10 fT/√Hz on an applied field of about 10 μT, corresponding to an effective
-												signal-to-noise ratio of about one part per billion. The sensor uses potassium atoms in a
-												thermal-vapour cell, with helium buffer gas and nitrogen for quenching. Sensitivity was measured
-												from the spectral density of lock-in-amplified probe-beam polarisation rotation at atomic resonance.
-												Alkali-vapour magnetometers have applications in geomagnetic surveys, fundamental physics, NMR, MRI,
-												and NQR. Low-frequency performance was limited by current-source noise.</p>
+												<p>At A*STAR Q.InC, I built and tested a prototypical scalar atomic magnetometer,
+													reaching a measured sensitivity as low as 24 fT/√Hz while detecting a 10 μT test field.
+													At geomagnetic field strengths, this corresponds to sensitivity near one part per billion per √Hz.
+													The sensor uses
+													potassium vapour in a thermal cell and measures atomic spin precession through the rotation
+													of a linearly polarised probe beam. Potential applications include geomagnetic surveys,
+													fundamental physics, NMR, MRI, and NQR.</p>
 										</div>
 										<figure class="qep-home-photo">
 									<img
@@ -179,12 +193,16 @@
 									<img class="project-icon" src="images/project-nqr.svg" alt="" />
 									<span>
 										<strong>NQR Radio-Frequency Magnetometer</strong>
-										<small>Detection research for border screening</small>
+										<small>Chemical specific precision sensing</small>
 									</span>
 								</summary>
 								<div class="research-project-content">
-									<p>I designed optical-pump lasers, optomechanics, electromagnets, and an oven for an NQR-based
-										radio-frequency magnetometer project aimed at detecting unexploded ordnance and crystalline narcotics.</p>
+									<p>At A*STAR Q.InC, I contributed to the first half of a project to build a prototype NQR-based
+										radio-frequency magnetometer for detecting unexploded ordnance and specific crystalline narcotics.
+										When I left to pursue my MSc, the literature review was complete and the experimental setup had
+										been designed and assembled for initial testing. The sensor is related to the QEP 2.0 Atomic
+										Magnetometer, with RF and detuning coils, modular sample mounts, and pump-power amplification
+										for RF operation.</p>
 									<a class="button research-read-more" href="research/projects/nqr-rf-magnetometer.html">Read more</a>
 								</div>
 							</details>
@@ -350,19 +368,6 @@
 								</div>
 							</details>
 
-							<details class="research-project research-more" id="research-more">
-								<summary>
-									<img class="project-icon" src="images/project-more.svg" alt="" />
-									<span>
-										<strong>More Research</strong>
-										<small>Visit the dedicated research website</small>
-									</span>
-								</summary>
-								<div class="research-project-content">
-									<p>Explore a broader overview of my research interests, selected projects, and future work in quantum technologies.</p>
-									<a class="button research-more-button" href="quantum-research-notebook.html">Visit the research website</a>
-								</div>
-							</details>
 							<!--
 							<div class="row">
 								<div class="col-4 col-12-mobile">

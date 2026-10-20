@@ -44,8 +44,8 @@
           <div>
             <p class="research-kicker">Radio-frequency sensing · NQR</p>
             <h1>NQR-based RF Magnetometer</h1>
-            <p class="lead">Experimental design and subsystem development for a radio-frequency
-            detector based on nuclear quadrupole resonance.</p>
+            <p class="lead">Designing an atomic radio-frequency magnetometer for nuclear quadrupole
+            resonance detection.</p>
           </div>
           <div class="detail-hero-art">
             <img src="../../images/project-nqr.svg" alt="NQR magnetometer project illustration" />
@@ -55,50 +55,199 @@
         <div class="detail-content">
           <section class="detail-panel">
             <h2>Project Abstract</h2>
-            <p>I designed optical-pump lasers, optomechanics, electromagnets, and an oven for an
-            NQR-based radio-frequency magnetometer project aimed at detecting unexploded ordnance
-            and crystalline narcotics.</p>
-            <p>The work involved developing and integrating the optical, mechanical, and magnetic
-            components needed to support the detector experiment.</p>
+            <p>At A*STAR Q.InC, I contributed to the first half of a project to build a prototype
+            NQR-based radio-frequency magnetometer for detecting unexploded ordnance and specific
+            crystalline narcotics. By the time I left the project, we had completed the literature
+            review, designed the experimental setup, and assembled it for initial testing.</p>
+            <p>The sensor is closely related to the <a href="atomic-magnetometry.html">QEP 2.0
+            Atomic Magnetometer</a>, with upgrades to the optics and vapour-cell geometry for RF
+            operation. These include RF and detuning coils, modular sample mounts, and pump-power
+            amplification.</p>
           </section>
           <aside class="detail-panel">
             <h2>Contribution &amp; Recognition</h2>
-            <p>My contribution covered the optical-pump laser, optomechanics, electromagnets, and
-            oven, including subsystem integration. Collaborator and formal recognition details can
-            be added when confirmed.</p>
+            <p>I designed and integrated the optical-pump laser system, optomechanics,
+            electromagnets, and oven needed for the detector experiment. The project team included
+            Junyi Lee, Danial Abdullah, and me, working at A*STAR's Quantum Innovation Centre
+            (Q.InC).</p>
           </aside>
         </div>
         <!-- Expandable project background, results, methods, and citations. -->
         <section class="detail-accordions" aria-label="Project details">
-          <details class="detail-accordion">
+          <details class="detail-accordion" open>
             <summary>Background And Motivation</summary>
             <div>
-              <p>Nuclear quadrupole resonance can produce material-specific radio-frequency
-              responses. This project explores how an atomic sensor can detect such signals in a
-              practical experimental system.</p>
+              <p>Nuclear Quadrupole Resonance (NQR) is a technique in which certain nuclei within
+              molecules have energy levels that split because their quadrupole moments interact
+              with the electric-field gradients created by their local chemical environment.
+              Radio-frequency transitions between these levels have characteristic frequencies
+              that depend on the local chemical bonds and crystal structure.</p>
+              <p>Experimentally, we can drive and then probe these transitions by applying a
+              radio-frequency magnetic field to the sample. This excites the nuclear spins and
+              induces an oscillating nuclear magnetization. Through careful engineering, we
+              propose to use an atomic magnetometer to measure this magnetization instead of a
+              conventional RF receiver coil, with the aim of improving sensitivity.</p>
+              <p>We focus on NQR spectroscopy of nitrogen-14 nuclei, which are found in many
+              explosives and crystalline narcotics. Potential applications include portable or
+              installed screening near import facilities, immigration checkpoints, and other
+              sites requiring stringent national security.</p>
+              <div class="detail-media-grid nqr-background-grid">
+              <figure class="detail-media-card nqr-background-figure">
+                <img src="../../images/nqr-nuclear-quadrupole-shapes.png"
+                alt="Schematic comparison of prolate, spherical, and oblate nuclear shapes" />
+                <figcaption>Schematic nuclear shapes illustrate how a non-spherical nuclear
+                charge distribution can have an electric quadrupole moment.</figcaption>
+              </figure>
+              <figure class="detail-media-card nqr-background-figure">
+                <img src="../../images/research-gallery-02.jpg"
+                alt="Close view of the RF excitation and detuning coil region inside the magnetometer shielding" />
+                <figcaption>Close view of the RF excitation and detuning-coil region inside the
+                magnetometer shielding.</figcaption>
+              </figure>
+              </div>
             </div>
           </details>
           <details class="detail-accordion">
             <summary>Results And Next Steps</summary>
             <div>
-              <p>The project focused on developing the optical, magnetic, mechanical, and thermal
-              subsystems needed for a detector experiment. Future work would integrate these
-              components and evaluate detection performance under realistic conditions.</p>
+              <p>When I left the project to pursue my MSc, the literature review was complete and
+              the experimental setup had been designed and assembled for initial testing. Testing
+              the sensor and RF excitation sequence with reference samples was the next step.</p>
+              <p>The design review set a sensitivity target below 2 fT/√Hz. Simulations predicted
+              an optimum below 1 fT/√Hz and estimated that a signal-to-noise ratio of 3 could be
+              reached from about 70 g of ammonium nitrate in less than 20 seconds. The first
+              functional test would be to detect ammonium nitrate, then progressively test
+              compounds with higher NQR resonance frequencies.</p>
+              <div class="detail-media-grid nqr-frequency-grid">
+              <figure class="detail-media-card nqr-frequency-reference">
+                <img src="../../images/nqr-chemical-resonance-reference.png"
+                alt="Reference table of NQR resonance frequencies and relaxation parameters for ammonium nitrate, TNT, PETN, RDX, HMX, cocaine base, and caffeine" />
+                <figcaption>Reference NQR resonance frequencies and relaxation parameters for
+                candidate compounds. The listed frequencies indicate a possible progression from
+                the initial ammonium-nitrate test to higher-frequency targets.</figcaption>
+              </figure>
+              <figure class="detail-media-card nqr-frequency-bandwidth">
+                <img src="../../images/nqr-resonance-excitation-bandwidth.png"
+                alt="Nitrogen-14 NQR resonance-frequency bands for RDX, HMX, PETN, and TNT, with an approximately 5 kHz excitation bandwidth marked" />
+                <figcaption>Example nitrogen-14 NQR resonance frequencies for several compounds;
+                the marked 5 kHz bandwidth illustrates the narrow frequency range addressed by
+                an excitation sequence. Source: <a href="https://www-pub.iaea.org/mtcd/publications/pdf/p1441_cd/papers2007/zhu.pdf" target="_blank" rel="noopener noreferrer">IAEA conference paper by Zhu</a>.</figcaption>
+              </figure>
+              </div>
+
+              <h3>Vapour Cell, Oven, Magnetic Coils, Cooling, And Modularity</h3>
+              <p>The experiment required custom mechanical supports for its critical components;
+              their functions are described in the Methodology section. We designed and assembled
+              the setup, including the magnetic-coil wiring, a thermally isolating oven, the
+              20 × 20 × 20 mm potassium vapour cell, and a ceramic RF-coil assembly with a mount
+              designed for active water cooling. The sample holder and surrounding structure
+              were designed to make changing chemical samples straightforward. See the images
+              at the end for 3D renders of the experimental setup.</p>
+
+              <h3>Pump Optics And Tapered Amplifier</h3>
+              <p>The pump system is more powerful and uses a larger beam than the QEP 2.0
+              magnetometer. A tapered amplifier boosts the seed laser to approximately 121 mW,
+              with the beam expanded and shaped to illuminate the vapour cell diffusely and
+              relatively uniformly. Other optics set the beam size at the cell, improve coupling
+              into and out of the amplifier, and provide an additional isolator to reduce back
+              reflections.</p>
+
+              <h3>Electronics</h3>
+              <p>We developed custom electronics for the experiment. I designed an interlock
+              system that monitors pump-laser power and shuts down the amplifier if the seed laser
+              is absent. We also measured the RF coils' inductance in situ to inform the matching
+              network design, reduce unintended parasitic capacitance, and support efficient
+              resonance matching.
+              This matching is important for reaching the higher resonance frequencies of some
+              target compounds, several of which have few or no demonstrated detections in the
+              literature.</p>
             </div>
           </details>
           <details class="detail-accordion">
             <summary>Methodology</summary>
             <div>
-              <p>I designed optical-pump lasers, optomechanics, electromagnets, and an oven, and
-              contributed to subsystem integration for the NQR detector.</p>
+              <figure class="method-diagram">
+                <img src="../../images/nqr-magnetometer-methodology.png"
+                alt="Top and side views of the NQR radio-frequency atomic magnetometer, showing pump and probe paths, shield, field coils, RF sample coils, sample holder, oven, and vapor cell" />
+                <figcaption>Optical, magnetic, and RF layout of the NQR magnetometer. The side view
+                shows the sample, excitation coils, and vapor cell assembly.</figcaption>
+              </figure>
+              <h3>Sample Excitation And Atomic Sensing</h3>
+              <p><strong>Sample holder and RF coils:</strong> the modular holder positions the
+              sample next to the potassium vapour cell. The top RF coil applies the
+              radio-frequency field that excites the sample's NQR transition. The bottom RF coil
+              is wound in the opposite sense, so the fields from the two coils cancel at the
+              vapour sensor. This reduces direct RF pickup while the sample's oscillating nuclear
+              magnetisation produces the signal measured by the atomic sensor.</p>
+              <p><strong>Vapour cell, oven, and cooling:</strong> the 2 cm cubic cell contains
+              potassium vapour, with nitrogen and helium buffer gases. The oven controls the cell
+              temperature and potassium density; the cooling assembly helps manage heat around
+              the RF coils and sample region.</p>
+              <p><strong>Detuning coils:</strong> these coils shift the atomic resonance during
+              the strong sample-excitation pulse, helping protect the potassium spin
+              polarisation from the pulse.</p>
+              <h3>Pump Laser And Optical Readout</h3>
+              <p><strong>Tapered amplifier:</strong> it boosts the pump-laser power so the
+              expanded beam can illuminate the large vapour cell with sufficient, relatively
+              uniform optical power. The <strong>acousto-optic modulator (AOM)</strong> provides
+              fast control of the pump beam, allowing it to be switched or modulated in sync with
+              the measurement sequence.</p>
+              <h3>Field Control And Readout</h3>
+              <p><strong>XYZ coils:</strong> arranged in Helmholtz geometry, these coils provide
+              the static tuning field <em>B</em><sub>0</sub> that brings the atomic Larmor frequency into
+              resonance with the NQR signal. They also compensate residual static magnetic
+              fields. The separate RF-drive coil supplies a smaller oscillating field for
+              characterising or driving the sensor response.</p>
+              <p>The pump and probe optics, balanced photodetector, and lock-in readout follow the
+              same general arrangement as the <a href="atomic-magnetometry.html">QEP 2.0 Atomic
+              Magnetometer</a>. Here, the probe rotation carries the response to the sample's
+              oscillating nuclear magnetisation. The RF amplifier and matching network drive the
+              sample excitation coils, while the function generator and data-acquisition system
+              coordinate the excitation and measurement timing.</p>
             </div>
           </details>
           <details class="detail-accordion">
             <summary>Citations</summary>
             <div>
-              <p>Citation details and project-specific references will be added here.</p>
+              <p>S.-K. Lee, K. L. Sauer, S. J. Seltzer, O. Alem, and M. V. Romalis,
+              “Subfemtotesla radio-frequency atomic magnetometer for detection of nuclear
+              quadrupole resonance,” <em>Applied Physics Letters</em>, vol. 89, 214106 (2006).</p>
+              <p>A. N. Garroway, M. L. Buess, J. P. Yesinowski, and J. B. Miller,
+              “Narcotics and explosives detection by <sup>14</sup>N pure NQR,”
+              <em>SPIE Substance Detection Systems</em>, vol. 2092, p. 318 (1993).</p>
             </div>
           </details>
+        </section>
+        <section class="detail-evidence">
+          <div class="section-heading">
+            <h2>Optics And Engineering</h2>
+            <p>Selected apparatus images showing the coil assembly and experimental hardware.</p>
+          </div>
+          <div class="detail-media-grid nqr-design-grid">
+            <figure class="detail-media-card">
+              <img src="../../images/nqr-lantern-coil-assembly.png"
+              alt="CAD rendering of the NQR magnetometer assembly with large blue circular coils around the vapour cell and sample region" />
+              <figcaption>CAD rendering of the coil-and-cell assembly, with the blue rings arranged
+              around the vapour cell and sample region.</figcaption>
+            </figure>
+            <figure class="detail-media-card">
+              <img src="../../images/nqr-helmholtz-coil-cage.png"
+              alt="Three-axis Helmholtz coils mounted around a removable inner cage" />
+              <figcaption>Three-axis Helmholtz coils surround the inner cage, designed to slide in
+              and out of the magnetic and RF shields.</figcaption>
+            </figure>
+            <figure class="detail-media-card">
+              <img src="../../images/nqr-potassium-vapour-cell.png"
+              alt="Square 20 by 20 by 20 potassium vapour cell with potassium droplets visible inside" />
+              <figcaption>The 20 × 20 × 20 vapour cell, with potassium droplets visible inside.</figcaption>
+            </figure>
+            <figure class="detail-media-card">
+              <img src="../../images/nqr-lantern-assembly-photo.png"
+              alt="Assembled NQR magnetometer lantern structure mounting the detuning coils, RF coils, cooling, oven, and vapour cell" />
+              <figcaption>The assembled lantern structure mounts the detuning and RF coils, cooling
+              and oven systems, and vapour cell.</figcaption>
+            </figure>
+          </div>
         </section>
       </main>
       <footer class="research-footer">

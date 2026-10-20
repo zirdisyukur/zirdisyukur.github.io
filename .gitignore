@@ -1,2 +1,3 @@
 # Finder metadata should not be committed with site content.
 .DS_Store
+.ipynb_checkpoints/
