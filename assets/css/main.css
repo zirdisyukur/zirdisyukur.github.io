@@ -3353,6 +3353,9 @@ input, select, textarea {
   object-position: center;
   background: #e9ecee;
 }
+.publication-tile[data-title="Quantum Mechanics Exercises"] > img {
+  object-fit: contain;
+}
 .publication-tile-title {
   display: block;
   flex: 1;
